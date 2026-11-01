@@ -1,0 +1,321 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f6fc;
+    color: #252542;
+}
+
+.navbar {
+    background: #211b50;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.navbar h2 span {
+    color: #ffba5c;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+button {
+    background: #6952d8;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #4936b1;
+}
+
+.hero {
+    text-align: center;
+    padding: 85px 5%;
+    color: white;
+    background: linear-gradient(120deg, #31216e, #7358d9);
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+}
+
+.search-box {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    gap: 10px;
+    max-width: 1100px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+input, select {
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+    min-width: 0;
+}
+
+.search-box input,
+.search-box select {
+    flex: 1;
+}
+
+.reset-btn {
+    background: #555;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.stats h2 {
+    color: #6952d8;
+}
+
+.section {
+    padding: 50px 7%;
+}
+
+.section h2 {
+    margin-bottom: 15px;
+    color: #292052;
+}
+
+#resultCount {
+    margin: 15px 0;
+    color: #666;
+}
+
+.job-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.job-card, .match-card, .application-card {
+    background: white;
+    border-radius: 12px;
+    padding: 23px;
+    box-shadow: 0 4px 15px #00000012;
+    border: 1px solid #eee;
+}
+
+.job-card h3 {
+    color: #4936b1;
+    margin-bottom: 8px;
+}
+
+.company-name {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.job-card p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.job-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+    font-size: 13px;
+}
+
+.job-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 15px 0;
+}
+
+.job-skills span {
+    background: #eeeaff;
+    color: #4936b1;
+    padding: 6px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.job-category {
+    display: inline-block;
+    background: #fff0d9;
+    color: #855000;
+    padding: 6px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.apply-btn {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.skill-section {
+    background: #eeeaff;
+}
+
+.skill-section input {
+    width: 65%;
+    margin: 15px 8px 15px 0;
+}
+
+#matchResult {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#matchResult h3 {
+    grid-column: 1 / -1;
+}
+
+.application-card {
+    margin: 15px 0;
+}
+
+.application-card p {
+    margin: 8px 0;
+}
+
+.message {
+    margin-top: 12px;
+    color: #4936b1;
+}
+
+footer {
+    text-align: center;
+    background: #211b50;
+    color: white;
+    padding: 35px;
+    line-height: 2;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #0009;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    width: 100%;
+    max-width: 430px;
+    border-radius: 13px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content input {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+}
+
+.modal-content form button {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: #eee;
+    color: #333;
+    padding: 5px 12px;
+    font-size: 22px;
+}
+
+.text-btn {
+    background: transparent;
+    color: #4936b1;
+    padding-left: 0;
+}
+
+@media(max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        display: inline-block;
+        margin: 8px 5px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input,
+    .search-box select,
+    .search-box button {
+        width: 100%;
+    }
+
+    .stats {
+        gap: 25px;
+    }
+
+    .skill-section input {
+        width: 100%;
+    }
+}
